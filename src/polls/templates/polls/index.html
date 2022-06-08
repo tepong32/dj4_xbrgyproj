@@ -1,0 +1,9 @@
+Here is the poll index page!
+
+
+{% for q in questions %}
+	<h4>q.question_text</h4>: <br>
+		{% for c in choices %}
+			c.choice_text
+		{% endfor %}
+{% endfor %}
