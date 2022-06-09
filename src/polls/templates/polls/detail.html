@@ -1,3 +1,14 @@
 Detail page for question:
+<u>{{question.id}}</u>
 <hr>
-{{question}}
+<h1>{{ question.question_text }}</h1>
+<ul>
+{% for choice in question.choice_set.all %}
+
+	{# comment: "choice_set.all" was not implicitly typed on views.py(detail), it was directly accessed as something linked to the model/variable "question" thru "ForeignKey" attr #}
+	{# comment: test out the syntaxing on other model types that you will use in the future #}
+
+    <li>{{ choice.choice_text }}</li>
+	
+{% endfor %}
+</ul>
