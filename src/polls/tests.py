@@ -4,6 +4,9 @@ from django.utils import timezone
 
 from .models import Question
 
+# test methods should start with "test"
+# see https://docs.djangoproject.com/en/4.0/intro/tutorial05/
+
 class QuestionModelTest(TestCase):
 	def test_was_published_recently_with_future_question(self):
 		"""
